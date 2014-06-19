@@ -13,6 +13,7 @@
   * Running rake for the first time now installs racc.  Pull request #285 by
     Kouhei Sutou.
   * Added <code>-h</code> flag to also display help.  Issue #300 by Ryan Davis
+  * search_index.js is now loaded asynchronously for improved performance.
 
 * Bug fixes
   * RDoc handles ASCII-incompatible encodings now.  An encoding hint may need
@@ -20,6 +21,11 @@
     Issue #288 by Manuel Meurer.
   * Fixed height recalculation issues when headings are hovered.  Issue #289
     by Dietmar H. Büto.
+  * RDoc now ignores its own output directories.  Pull Request #306 by
+    Hsing-Hui Hsu, bug #305 by Ryan Davis.
+  * Fixed RDoc::Task no longer uselessly builds documentation when generating
+    non-HTML output.  Bug #307 by Christina Thompson, pull request #308 by
+    Hsing-Hui Hsu
   * Added pointer to font copyright and license information to LEGAL.rdoc.
     Issue #290 by Christian Hofstaedtler.
   * Fixed RDoc::Context#<=> for ruby trunk.  Issue #284 by Hanmac, pull
